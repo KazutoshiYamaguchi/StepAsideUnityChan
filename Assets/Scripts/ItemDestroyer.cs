@@ -9,11 +9,11 @@ public class ItemDestroyer : MonoBehaviour {
 	private GameObject carpre;
 	private GameObject conepre;
 	private GameObject coinpre;
-    private GameObject unitychan;
+    private GameObject camera;
 	// Use this for initialization
 	void Start () {
 		
-		this.unitychan = GameObject.Find("unitychan");
+		this.camera = GameObject.Find("Main Camera");
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class ItemDestroyer : MonoBehaviour {
 
 		if (conepre)
 		{
-			if (this.conepre.transform.position.z < unitychan.transform.position.z)
+			if (this.conepre.transform.position.z < camera.transform.position.z)
 			{
 				Destroy(this.conepre.gameObject);
 			}
@@ -37,7 +37,7 @@ public class ItemDestroyer : MonoBehaviour {
 
 		if (carpre)
 		{
-			if (this.carpre.transform.position.z < unitychan.transform.position.z)
+			if (this.carpre.transform.position.z < camera.transform.position.z)
 			{
 				Destroy(this.carpre.gameObject);
 			}
@@ -49,7 +49,7 @@ public class ItemDestroyer : MonoBehaviour {
 
 		if (coinpre)
 		{
-			if (this.coinpre.transform.position.z < unitychan.transform.position.z)
+			if (this.coinpre.transform.position.z < camera.transform.position.z)
 			{
 				Destroy(this.coinpre.gameObject);
 			}
